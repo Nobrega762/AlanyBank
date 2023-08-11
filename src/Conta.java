@@ -21,10 +21,14 @@ public class Conta {
 	}
 	
 	void rendimento() {
-		
 		this.saldo += this.saldo * 0.1;
-		System.out.println("Sua conta rendeu 0.1% e agora você tem: " + this.saldo);
+		System.out.println("Sua conta rendeu 0.1% e agora vocÃª tem: " + this.saldo);
 		
+	}
+
+	void imprimirDadosBancarios(){
+		System.out.println("Titular: " +this.titular+"\nAgencia: " + this.agencia+"\nConta Corrente: " +this.numero+"\nSaldo: "+ this.saldo+ "\nData de Abertura: " +this.dataAbertura);
+		rendimento();
 	}
 
 }
