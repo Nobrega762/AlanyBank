@@ -6,6 +6,12 @@ public class Conta {
 	double saldo;
 	String dataAbertura;
 
+	void setDataAbertura(int dia, int mes, int ano){
+		Data data = new Data();
+		dataAbertura = data.dataFormat(dia,mes,ano);
+
+	}
+
 	void sacar(double quantidade) {
 		if (quantidade > this.saldo) {
 			System.out.println("Saldo insuficiente.");
@@ -26,9 +32,14 @@ public class Conta {
 		
 	}
 
-	void imprimirDadosBancarios(){
-		System.out.println("Titular: " +this.titular+"\nAgencia: " + this.agencia+"\nConta Corrente: " +this.numero+"\nSaldo: "+ this.saldo+ "\nData de Abertura: " +this.dataAbertura);
+	String imprimirDadosBancarios(){
+		String dados = "Data de Abertura da Conta: "+dataAbertura + "\nTitular: " +this.titular+"\nAgencia: " + this.agencia+"\nConta Corrente: " +this.numero+"\nSaldo: "+ this.saldo;
+		
 		rendimento();
+		
+		
+		return dados;
+		
 	}
 
 }
