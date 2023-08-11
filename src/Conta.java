@@ -26,16 +26,17 @@ public class Conta {
 		System.out.println("Valor depositado " + quantidade + "\nSaldo atual: " + this.saldo);
 	}
 	
-	void rendimento() {
+	double rendimento() {
 		this.saldo += this.saldo * 0.1;
-		System.out.println("Sua conta rendeu 0.1% e agora você tem: " + this.saldo);
+		return this.saldo;
 		
 	}
 
 	String imprimirDadosBancarios(){
-		String dados = "Data de Abertura da Conta: "+dataAbertura + "\nTitular: " +this.titular+"\nAgencia: " + this.agencia+"\nConta Corrente: " +this.numero+"\nSaldo: "+ this.saldo;
 		
-		rendimento();
+		String dados = "Data de Abertura da Conta: "+dataAbertura + "\nTitular: " +this.titular+"\nAgencia: " + this.agencia+"\nConta Corrente: " +this.numero+"\nSaldo: "+ this.saldo + "\nRendimento: " +rendimento();
+		
+		
 		
 		
 		return dados;
