@@ -8,12 +8,15 @@ public class main {
 
 		
 		c1.setDataAbertura(18, 12, 1992);
-		c1.agencia = "3345";
-		c1.numero = 999999999;
-		c1.titular = "Renato Luiz";
-		c1.saldo = 100;
+		c1.setAgencia("3345");
+		c1.setNumero(999999999);
+		c1.setTitular("Renato Luiz");
+		c1.setSaldo(100);
+
+		c1.setDepositar(440);
+		c1.getSacar(200);
 		
-		String result = c1.imprimirDadosBancarios();
+		String result = c1.getImprimirDadosBancarios();
 		System.out.println(result);
 		
 	
