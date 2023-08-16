@@ -6,6 +6,12 @@ public class Conta {
 	private double saldo;
 	private String dataAbertura;
 
+	 Conta(String titular, int numero, double saldo){
+		this.titular = titular;
+		this.numero = numero;
+		this.saldo = saldo;
+	}
+
 	public String getTitular() {
 		return titular;
 	}
