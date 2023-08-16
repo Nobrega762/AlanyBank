@@ -1,3 +1,10 @@
+package br.com.caelum.alanybank.modelo;
+
+/**
+ *  Classe responsável por moldar as Contas do Banco
+ *  
+ *  @author Renato Nobrega
+ */
 
 public class Conta {
 	private String titular;
@@ -6,7 +13,7 @@ public class Conta {
 	private double saldo;
 	private String dataAbertura;
 
-	 Conta(String titular, int numero, double saldo){
+	 public Conta(String titular, int numero, double saldo){
 		this.titular = titular;
 		this.numero = numero;
 		this.saldo = saldo;
@@ -57,7 +64,10 @@ public class Conta {
 		dataAbertura = data.dataFormat(dia,mes,ano);
 
 	}
-	
+	/**
+	 * Método que saca o saldo
+	 * @param quantidade
+	 */
 	public void getSacar(double quantidade) {
 		if (quantidade > this.saldo) {
 			System.out.println("Saldo insuficiente.");
@@ -78,7 +88,7 @@ public class Conta {
 		
 	}
 
-	String getImprimirDadosBancarios(){
+	public String getImprimirDadosBancarios(){
 		
 		String dados = "Data de Abertura da Conta: "+getDataAbertura() + "\nTitular: " +getTitular()+"\nAgencia: " + getAgencia()+"\nConta Corrente: " +getNumero()+"\nSaldo: "+ getSaldo() + "\nRendimento: " +getRendimento();
 		

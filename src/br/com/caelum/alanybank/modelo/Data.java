@@ -1,3 +1,4 @@
+package br.com.caelum.alanybank.modelo;
 public class Data {
    private int dia;
    private  int mes;
